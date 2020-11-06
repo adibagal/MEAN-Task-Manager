@@ -5,8 +5,9 @@ var ListSchema= new mongoose.Schema({
         type:String,
         required:true,
         minlength:1,
-        trim:true
-
+        trim:true,
+        index: true, 
+        unique:true
     }
 })
 
