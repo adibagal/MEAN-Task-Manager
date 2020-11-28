@@ -1,4 +1,5 @@
 @import '../../../main-styles.scss';
+
 .task-manager-container {
     display: flex;
     width: 100%;
@@ -40,13 +41,6 @@
         }
     }
     
-}
-
-.title{
-    font-family:  'Lata';
-    font-size: 24px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
 }
 
 .list-menu{
@@ -92,10 +86,19 @@
     } 
    
     }
-    &.complete{
+    &.completed{
         text-decoration: line-through;
         opacity: 0.8;
     }
 
     
+}
+
+.circle-add-button{
+    position: absolute;
+    height:50px;
+    bottom: 35px;
+    right:35px;
+    width:50px;
+    border-radius: 50%;
 }

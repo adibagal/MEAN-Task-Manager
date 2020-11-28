@@ -6,22 +6,24 @@ import{HttpClient} from '@angular/common/http';
 export class WebRequestService {
   readonly ROOT_URL;
   constructor(public http:HttpClient) { 
-    this.ROOT_URL ="http:localhost:3000";
+    this.ROOT_URL ='http://localhost:3000';
   }
  
-  get(url:string){
-    return this.http.get(`${this.ROOT_URL}/${url}`);
+ 
+  get(uri: string) {
+    return this.http.get(`${this.ROOT_URL}/${uri}`);
   }
 
-  post(url:string, payload:object){
-    return this.http.post(`${this.ROOT_URL}/${url}`, payload);
+  post(uri: string, payload: Object) {
+    return this.http.post(`${this.ROOT_URL}/${uri}`, payload);
   }
 
-  patch(url:string,payload:object){
-    return this.http.patch(`${this.ROOT_URL}/${url}`,payload);
+  patch(uri: string, payload: Object) {
+    return this.http.patch(`${this.ROOT_URL}/${uri}`, payload);
   }
 
-  delete(url:string){
-    return this.http.delete(`${this.ROOT_URL}/${url}`)
+  delete(uri: string) {
+    return this.http.delete(`${this.ROOT_URL}/${uri}`);
   }
+  
 }
